@@ -1,0 +1,14 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Posy-Plugin-Meta-Links
+version:      0.1
+version_from: lib/Posy/Plugin/Meta/Links.pm
+installdirs:  site
+requires:
+    Posy:                          0.92
+    Posy::Core:                    0.92
+    Posy::Plugin::Meta:            0.1
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.25

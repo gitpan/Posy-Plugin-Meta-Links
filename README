@@ -1,0 +1,53 @@
+Posy::Plugin::Meta version 0.1
+==============================
+
+This module appends links to the end of an entry for all links
+contained with the entry's metadata.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Posy
+  Posy::Core
+  Posy::Plugin::Meta
+  Test::More
+
+ACTIVATION
+
+Add this module to Posy's @plugins array after the Posy::Plugin::Meta
+module.
+
+Add the "meta_links" action to Posy's @entry_actions array between
+"parse_entry" and "render_entry" and after "parse_meta";
+
+USE
+
+Insert metadata links within an entry:
+
+  The Entry's Title
+  <!--
+  meta-links: http://devclue.com/ http://search.cpan.org/
+  -->
+  The rest of the entry is down here.
+
+This module will append links to the end of the $current_entry->{body}
+of the form "<a href="...">[LINK]</a>".  All of the links will be
+wrapped within "<p>...</p>".
+
+COPYRIGHT AND LICENSE
+
+Copyright (C) 2005 blair christensen.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
